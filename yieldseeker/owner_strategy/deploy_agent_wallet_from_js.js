@@ -129,7 +129,7 @@ if (firstAgent) {
 console.log("agentId:", user.agentId);
 
 const wallet = await api(`/v1/users/${user.userId}/agents/${user.agentId}/wallet`, { auth });
-user.walletAddress = wallet.agentWallet.walletAddress;
+user.agentWalletAddress = wallet.agentWallet.walletAddress;
 console.log("wallet:", JSON.stringify(wallet, null, 2));
 console.log("walletAddress:", user.walletAddress);
 console.log(user);
